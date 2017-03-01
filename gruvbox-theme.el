@@ -121,6 +121,10 @@
   (gruvbox-burlywood4      "#BBAA97" "#afaf87")
   (gruvbox-aquamarine4     "#83A598" "#87af87")
   (gruvbox-turquoise4      "#61ACBB" "#5fafaf")
+  (gruvbox-maroon1         "#553333" "#553333")
+  (gruvbox-lightpink1      "#ffdddd" "#ffdddd")
+  (gruvbox-lightgreen1     "#cceecc" "#cceecc")
+  (gruvbox-darkgreen1      "#336633" "#336633")
 
   (gruvbox-bg (cl-case gruvbox-contrast
                 (hard gruvbox-dark0_hard)
@@ -213,6 +217,17 @@
   (diff-indicator-added                      (:inherit 'diff-added))
   (diff-indicator-removed                    (:inherit 'diff-removed))
 
+  ;; Ediff
+  (ediff-even-diff-A                         (:background gruvbox-dark_blue))
+  (ediff-odd-diff-A                          (:background gruvbox-dark_blue))
+  (ediff-even-diff-B                         (:background gruvbox-dark_aqua))
+  (ediff-odd-diff-B                          (:background gruvbox-dark_aqua))
+
+  ;; Magit
+  (magit-diff-removed-highlight              (:background gruvbox-maroon1 :foreground gruvbox-lightpink1))
+  (magit-diff-added-highlight                (:background gruvbox-darkgreen1 :foreground gruvbox-lightgreen1))
+
+  ;; js2
   (js2-warning                               (:underline (:color gruvbox-bright_yellow :style 'wave)))
   (js2-error                                 (:underline (:color gruvbox-bright_red :style 'wave)))
   (js2-external-variable                     (:underline (:color gruvbox-bright_aqua :style 'wave)))
@@ -420,24 +435,24 @@
   (ivy-minibuffer-match-face-4               (:foreground gruvbox-faded_yellow))
 
   ;; MODE SUPPORT: dired+
-  (diredp-file-name                          (:foreground gruvbox-light2))
-  (diredp-file-suffix                        (:foreground gruvbox-light4))
-  (diredp-compressed-file-suffix             (:foreground gruvbox-faded_blue))
-  (diredp-dir-name                           (:foreground gruvbox-faded_blue))
-  (diredp-dir-heading                        (:foreground gruvbox-bright_blue))
-  (diredp-symlink                            (:foreground gruvbox-bright_orange))
-  (diredp-date-time                          (:foreground gruvbox-light3))
-  (diredp-number                             (:foreground gruvbox-faded_blue))
-  (diredp-no-priv                            (:foreground gruvbox-dark4))
-  (diredp-other-priv                         (:foreground gruvbox-dark2))
-  (diredp-rare-priv                          (:foreground gruvbox-dark4))
-  (diredp-ignored-file-name                  (:foreground gruvbox-dark4))
+  (diredp-file-name                          (:background gruvbox-bg :foreground gruvbox-light2))
+  (diredp-file-suffix                        (:background gruvbox-bg :foreground gruvbox-light4))
+  (diredp-compressed-file-suffix             (:background gruvbox-bg :foreground gruvbox-faded_blue))
+  (diredp-dir-name                           (:background gruvbox-bg :foreground gruvbox-faded_blue))
+  (diredp-dir-heading                        (:background gruvbox-bg :foreground gruvbox-bright_blue))
+  (diredp-symlink                            (:background gruvbox-bg :foreground gruvbox-bright_orange))
+  (diredp-date-time                          (:background gruvbox-bg :foreground gruvbox-light3))
+  (diredp-number                             (:background gruvbox-bg :foreground gruvbox-faded_blue))
+  (diredp-no-priv                            (:background gruvbox-bg :foreground gruvbox-dark4))
+  (diredp-other-priv                         (:background gruvbox-bg :foreground gruvbox-dark2))
+  (diredp-rare-priv                          (:background gruvbox-bg :foreground gruvbox-dark4))
+  (diredp-ignored-file-name                  (:background gruvbox-bg :foreground gruvbox-dark4))
 
-  (diredp-dir-priv                           (:foreground gruvbox-faded_blue  :background gruvbox-dark_blue))
-  (diredp-exec-priv                          (:foreground gruvbox-faded_blue  :background gruvbox-dark_blue))
-  (diredp-link-priv                          (:foreground gruvbox-faded_aqua  :background gruvbox-dark_aqua))
-  (diredp-read-priv                          (:foreground gruvbox-bright_red  :background gruvbox-dark_red))
-  (diredp-write-priv                         (:foreground gruvbox-bright_aqua :background gruvbox-dark_aqua)))
+  (diredp-dir-priv                           (:background gruvbox-bg :foreground gruvbox-faded_blue))
+  (diredp-exec-priv                          (:background gruvbox-bg :foreground gruvbox-faded_blue))
+  (diredp-link-priv                          (:background gruvbox-bg :foreground gruvbox-faded_aqua))
+  (diredp-read-priv                          (:background gruvbox-bg :foreground gruvbox-bright_red))
+  (diredp-write-priv                         (:background gruvbox-bg :foreground gruvbox-bright_aqua)))
 
  (custom-theme-set-variables 'gruvbox
                              `(ansi-color-names-vector
